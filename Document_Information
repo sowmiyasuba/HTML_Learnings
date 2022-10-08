@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <!--Specify a default URL and a default target for all links on a page-->
+<base 
+href="https://www.w3schools.com/" target="_blank"/> 
+  
+  <!--to specify our webpage name on title bar normally used by search engines to know name of page-->
+ <title>My beautiful website</title>
+  
+  <!--defines the relationship between the current document and an external resource.mostly used to link style sheet or favicon image-->
+  <link rel="stylesheet" href="styles.css"></link>
+  
+  
+  <!--The charset attribute specifies the character encoding for the HTML document.The HTML5 specification encourages web 
+   developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world!-->
+  <meta charset="UTF-8">
+  
+  <!--Define a description of your web page:-->
+  <meta name="description"  content="Free html series">
+  
+  <!--Define the author of a page:-->
+  <meta name="author" content="sowmiyamurugesann@gmail.com">
+  
+  <!--Define keywords for search engines:-->
+  <meta name="keywords" content="html">
+  
+  <!--Setting the viewport to make your website look good on all devices:-->
+  <meta name="viewport" content="width=device-width" initial-scale=1.0">
+
+  <!--before redirecting to page we can set delay of laoding a page or we can set it immediately-->                                         
+  <meta http-equiv="refresh" content="30" url="https://www.w3schools.com/" >
+  
+</head>  
+  
+  <body>
+
+    <!--here we have used relative urls and base url would be taken from base tag of head-->
+    <a href="html/html_classes.asp">html classes</a>
+    <br></br>
+
+    <a href="html/html_attributes.asp">html attributes</a>
+    <br></br>
+
+    <a href="html/html_formatting.asp">html formatting</a>
+   
+  </body>
+   
+</html>

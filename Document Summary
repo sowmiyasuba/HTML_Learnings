@@ -1,0 +1,20 @@
+<!--document summary-->
+<!DOCTYPE html>
+
+<!--beginning of html doc-->
+<html>
+ 
+  <!--contains information specific to the page like title,script, links and meta-->
+ <head>  
+   <!--title of page which would be used by search engines to search a topic in web-->
+   <title>My First HTML Doc</title>
+</head>
+  
+  <!--has content which would be visible to end user-->
+  <body>
+    <p>my first html doc</p>
+  </body>
+  
+  
+  <!--ending of html tag-->
+</html>

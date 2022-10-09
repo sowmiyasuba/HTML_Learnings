@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+ <head>
+  <meta charset="UTF-8">
+   <meta name="author" content="sowmiya">
+   <meta name="description" content="links usage">
+   <meta name="viewport" content="width=device-width" initial-scale="1.0">
+   <meta name="keyword" content="html anchor tag usage">
+ 
+   
+   <title>text formatting and document structure</title>
+   <link ref="stylesheet" href="style.css">
+   
+ 
+</head>
+  
+<body>
+
+
+<!--to create a form
+************************************************************
+1)action: after submitting form where the submitted data should go?? ususally we give server side url which take user to next required page
+2)method:The method attribute specifies the HTTP method to be used when submitting the form data.
+The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post"). 
+3)target:The target attribute specifies where to display the response that is received after submitting the form.
+4)autocomplete:When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+5)novalidate: When present, it specifies that the form-data (input) should not be validated when submitted.
+-->
+<form action-"/action.php" method="get" target="_blank" autocomplete="on">
+
+<!--when visually impared/user clicks on it, it would take user to value param to type: ahh what are extra attributes???????
+*********************************************************************************
+1)for: it should be same as id and is used to redirect user to text box whn user clicks on label
+*********************************************************************************
+-->
+<label for="fname">fname:</label> 
+
+
+<!--it displays a text box for user to type name: ahh what are extra attributes???????
+*********************************************************************************
+1)name: used in backend to process the input parameter. If the name attribute is omitted, the value of the input field will not be sent at all.
+2)id:used in label tag for attribute so that label tag redirects user to input text box
+3)value: displays default value in the text box if user doesn't enter any
+*********************************************************************************
+--->
+<input type="text" name="fname" id="fname" placeholder="type your first name" value="suba" >
+
+<!--one line space to be user responsive site-->
+<br></br>
+
+<label for="lname">lname:</label>  <input type="text" name="lname" id="lname"  placeholder="type your last name" value="murugesan" >
+<br></br>
+
+<!--it displays text box and when user types words would be encoded as input is password type-->
+<label for="password">Password::</label>  <input type="password" name="password" id="password"  placeholder="type your password" >
+<br></br>
+
+<!--it creates radio button in front end and user can click any one of options-->
+ <input type="radio" name="fav_language" id="html" value="HTML"> <label for="html">HTML</label>
+<br></br>
+<input type="radio" name="fav_language" id="css" value="CSS"><label for="css">CSS</label> 
+<br></br>
+<input type="radio" name="fav_language" id="js" value="JS"> <label for="js">JS</label> 
+<br></br>
+
+
+
+<!--it creates checkboxes in front end and user can click many options-->
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+
+
+<!--it would display button and when user clicks on it it displays alert-->
+<input type="button" onclick="alert('I am an alert !!')" value="click me you have shock">
+<br></br>
+
+<!--it would display color and user can pick any of color from gradient-->
+<label for="color">fav_color</label>   <input type="color" name="fav_color" id="color" value="#ff0000">
+<br></br>
+
+<!--it would display date format (year,month,date) and user can pick anything from it-->
+<label for="birthday">birthday_date</label> <input type="date" id="birthday"  name="birthday" >
+<br></br>
+
+
+<!--it would display week and user can pick anything from it-->
+<label for="week">Select a week:</label> <input type="week" id="week" name="week">
+<br></br>
+
+<!--it would take input from user as url-->
+<label for="homepage">Add your homepage:</label><input type="url" id="homepage" name="homepage">
+<br></br>
+
+
+<!--it would take input from user as phone number in below format pattern:
+*********************************************************************************
+pattern: regex expression to say how input numbers need to be coming from user
+required attribute means the input field should be present for sure else form won't be processed further
+*********************************************************************************
+-->
+<label for="phone">Enter a phone number:</label><br><br>
+  <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+  <small>Format: 123-456-7890</small><br><br>
+<br></br>
+
+
+
+
+<!--it would take input from user and would search in our website-->
+<label for="gsearch">Search Google:</label> <input type="search" id="gsearch" name="gsearch">
+<br></br>
+
+
+<!--it would take input range from user: The input type "range" can be displayed as a slider control-->
+<label for="vol">Volume (between 0 and 50):</label><input type="range" id="vol" name="vol" min="0" max="50">
+<br></br>
+
+
+<!--it would take numeric input from user-->
+<label for="quantity">Quantity (between 1 and 5):</label> <input type="number" id="quantity" name="quantity" min="1" max="5">
+<br></br>
+
+<!--it would take month/year as input from user-->
+<input type="month" id="bdaymonth" name="bdaymonth"> <input type="submit" value="Submit">
+<br></br>
+
+
+<!--The hidden field is not shown to the user, but the data is sent when the form is submitted.-->
+<input type="hidden" id="custId" name="custId" value="3487">
+<br></br>
+
+
+<!--Show a file-select field which allows a file to be chosen for upload:-->
+<label for="myfile">Select a file:</label><input type="file" id="myfile" name="myfile">
+<br><br>
+
+<!--Display an Image as the Submit button.The input type="image" sends the X and Y coordinates of the click that activated the image button.-->
+<input type="image" src="C:\Users\C5345144\Downloads\success.png" alt="Submit" width="48" height="48">
+<br><br>
+
+<!--display text field where user can write email. other than mail it nwont accept-->
+<label for="email">Enter your email:</label><input type="email" id="email" name="email">
+<br><br>
+
+
+<!-The input type="datetime-local" specifies a date and time input field, with no time zone.-->
+<label for="birthdaytime">Birthday (date and time):</label><input type="datetime-local" id="birthdaytime" name="birthdaytime">
+<br><br>
+
+<!--Use the min and max attributes to add restrictions to dates:-->
+<label for="datemin">Enter a date after 2000-01-01:</label><input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+<label for="datemax">Enter a date before 1980-01-01:</label><input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+<br><br>
+
+
+<!--when user clicks on reset it would fill form with default values-->
+<input type="reset">
+<br></br>
+
+
+<!--it would submit entire form-->
+<input type="submit" value="submit">
+
+
+
+
+</form>
+
+</body>
+
+
+
+</html>

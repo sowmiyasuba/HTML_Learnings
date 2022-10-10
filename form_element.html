@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   
+   <meta charset="UTF-8">
+   <meta name="author" content="sowmiya">
+   <meta name="description" content="html_form_elements">
+   <meta name="keyword" content="html_form_elements">
+   <meta http-equiv="refresh" content="7">
+   <title>form_attributes</title>
+   <link ref="stylesheet" href="css.stylesheet">
+   <base href="https://www.w3schools.com/" target="_blank">
+   
+   
+ </head>
+  
+ <body>
+ 
+<form>
+<!--a simple field used to tell what to enter into the screen/form field for user.help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <label> element, it toggles the radio button/checkbox.-->
+<label for="username">Enter your name: </label>
+
+<!--type of field information to be received from user-->
+<input type="text" name="username" id="username" value="sowmiya" placeholder="what's your name????" >
+<br></br>
+
+<label for="cars" >Which car do you like?????</label>
+
+<!--select element efines a dropdown list 
+1)to define size of how many objects should be visible in dropdwon, we can mention size predefinely
+2)Use the multiple attribute to allow the user to select more than one value:-->
+<select id="cars" name="cars" size="3" multiple>
+
+
+<!--The <option> elements defines an option that can be selected.By default, the first item in the drop-down list is selected.
+1)To define a pre-selected option, add the selected attribute to the option:-->
+<option value="volto">volto</option>
+<option value="saab">Saab</option>
+<option value="fiat" selected>Fiat</option>
+<option value="audi">Audi</option>
+
+</select>
+
+<br></br>
+
+
+<!--to enter multi line input field like comments
+The rows attribute specifies the visible number of lines in a text area.
+The cols attribute specifies the visible width of a text area. -->
+
+<textarea name="comments" rows="10" columns="80"> A surprising day.On Wednesday, I woke up ready for school. So I hop on the bus and my best friend was waiting at the door for me. Shayna had been my friend for a year now. It was pouring today and we both looked gloomily out the window.
+When we got to school, we realised it was our most boring day at school, there was nothing interesting happening. We waited patiently and noticed that the sky was grey and starting to thunder.
+Inside, our class sat down and concentrated on our work. The rain was pouring down I could hear people in the back ground talking about their work. It was distracting. People were talking so much that three people were sent to the office.
+</textarea>
+
+<br></br>
+
+<!--The <button> element defines a clickable button:-->
+<button onclick="alert('got a shock???!')">click me you have shock!</button>
+<br></br>
+
+<!--The <fieldset> element is used to group of all fields in a form.-->
+<fieldset>
+
+<!--The <legend> element acts as a caption for the <fieldset> element-->
+
+<legend>can we know some of your favourites????</legend>
+<label for="color" >fav color:</label> <input type="text" name="color" id="color" value="green"> <br></br>
+<label for="food" >fav food :</label> <input type="text" name="food" id="food" value="parotta">   <br></br>
+<label for="actor" >fav actor:</label> <input type="text" name="actor" id="actor" value="vijay">  <br></br>
+</fieldset>
+
+<br></br>
+
+<!--The datalist element specifies a list of pre-defined options for an input element.-->
+  <input list="browsers" name="browsers">
+<datalist id="browsers">
+<option value="internet explorer">
+<option value="Firefox">
+<option value="Chrome">
+<option value="Opera">
+<option value="Safari">
+ </datalist>
+
+<br></br>
+
+
+
+
+<input type="submit" value="Submit">
+<br></br>
+
+</form>
+
+<!--The output element represents the result of a calculation-->
+<form action="/action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+
+  
+ </body>
+  
+  
+</html>

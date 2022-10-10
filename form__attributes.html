@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   
+   <meta charset="UTF-8">
+   <meta name="author" content="sowmiya">
+   <meta name="description" content="html_form_attributes">
+   <meta name="keyword" content="html_form_attributes">
+   <meta http-equiv="refresh" content="7">
+   <title>form_attributes</title>
+   <link ref="stylesheet" href="css.stylesheet">
+   <base href="https://www.w3schools.com/" target="_blank">
+   
+   
+ </head>
+  
+ <body>
+  
+   <!--action to be performed when form is submitted.In the example below, the form data is sent to a file called "action_page.php". This file contains a server-side script that handles the form data-->
+   <form action="/action.php">
+
+ </form>
+   
+<!-- The target attribute specifies where to display the response that is received after submitting the form.
+Four types of target are there:
+
+Using target="_top"
+target="_top" within a link tag causes the new page to load in the full body of the window, which is useful if you ever want to break out of the frameset you have created and have a frameless page.
+
+Using target="_parent"
+target="_parent" is similar to target="_top" but will refer to the immediate parent of a frame. In more advanced frame usage there may be several nested frames and this allows more control over which frames are specified.
+
+Using target="_blank"
+target="_blank" causes the link to open in a totally new browser window, leaving the page with the refering link still open behind it.
+
+Using target="_self"
+target="_self" loads the page within the same frame as the link tag.-->
+
+  <form target="_target">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+  </form>
+
+<!--When autocomplete is on, the browser automatically complete values based on values that the user has entered before.-->
+
+<form autocomplete="on">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+  </form>
+
+<!--The method attribute specifies the HTTP method(how to send form data) to be used when submitting the form data.-->
+
+<form method="get" action="/action.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+  </form>
+
+<!--The enctype attribute specifies how the form-data should be encoded when submitting it to the server.
+The enctype attribute can be used only if method="post".
+
+application/x-www-form-urlencode : All characters are encoded before sent (spaces are converted to "+" symbols, and special characters are converted to ASCII HEX values)
+multipart/form-data : This value is necessary if the user will upload a file through the form
+text/plain : Sends data without any encoding at all. Not recommended
+
+-->
+
+<form action="/action_page_binary.asp" method="post" enctype="multipart/form-data">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<!--novalidate: says input form should not be validated while submitting && 
+accept-chAarset :The accept-charset attribute specifies the character encodings that are to be used for the form submission.
+The default value is the reserved string "UNKNOWN" (indicates that the encoding equals the encoding of the document containing the <form> element
+-->
+
+<form action="/action_page_binary.asp" method="post" enctype="application/x-www-form-urlencoded" novalidate accept-charset="utf-8">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+  
+  </body>
+  
+  
+</html>
